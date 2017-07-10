@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.container {
+	-o-perspective: 5000px;
+	-ms-perspective: 5000px;
+	-moz-perspective: 5000px;
+	-webkit-perspective: 5000px;
+	perspective: 5000px;
+}
+
+#center {
+	position: absolute;
+	box-shadow: 1px 20px 28px #CCCCCC;
+	border-radius: 15px;
+	top: 30%;
+	right: 40%;
+	bottom: 30%;
+	left: 40%;
+}
+
+#center h1 {
+	text-align: center;	
+	margin-top: 20px;
+	color: #2BAF1D;
+}
+
+header h1:hover {
+	background: #2BAF1D;
+}
+
+/*hr {
+	position: absolute;
+	right: 0;
+	top: 5%;
+}
+*/
+/*tabs*/
+.tab {
+	position: absolute;
+	font-family: 'Amatic SC', cursive;
+	font-size: 2em;
+	background-color: white;
+	top: 68%;
+	right: 50%;
+	bottom: 25%;
+	left: 40%;
+}
+
+.tab a {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+/*	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);*/
+}
+
+.tab a:hover {
+	color: orange;
+}
+
+#rightTab {
+	right: 40%;
+	left: 50%;
+}
+
+/* Flipper */
+
+.flipContainer {
+	position: absolute;	
+}
+
+.flipContainer:hover .flipper {
+	-o-transform: rotateX(180deg);
+	-ms-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+	-webkit-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+	-o-transform-origin: 60% 135px;
+	-ms-transform-origin: 60% 135px;
+	-moz-transform-origin: 60% 135px;
+	-webkit-transform-origin: 60% 135px;
+	transform-origin: 60% 135px;
+}
+
+.flipContainer, .front, .back {
+	width: 480px;
+	height: 270px;
+}
+
+.flipper {
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	overflow: hidden;
+}
+
+.back {
+	-o-transform: rotateX(180deg);	
+	-ms-transform: rotateX(180deg);	
+	-moz-transform: rotateX(180deg);	
+	-webkit-transform: rotateX(180deg);	
+	transform: rotateX(180deg);	
+	border: 1px solid #ccc;
+	padding: 10px 0 0 15px;
+	background-color: white;
+}
+
+#topLeftImage {
+	top: 10%;
+	left: 5%;
+}
+
+#topRightImage {
+	top: 10%;
+	right: 5%;
+}
+
+#bottomLeftImage {
+	bottom: 10%;
+	left: 5%;
+}
+
+#bottomRightImage {
+	bottom: 10%;
+	right: 5%;
+}

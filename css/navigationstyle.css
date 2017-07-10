@@ -1,0 +1,162 @@
+/*NAVIGATION STYLING*/
+/*--------------------------------------------------------------------*/
+nav span:nth-child(2) a:first-child {
+    color: rgb(255, 109, 0);
+}
+
+nav span:nth-child(3) a:first-child {
+    color: rgb(65, 117, 222);
+}
+
+nav span:nth-child(4) a:first-child {
+    color: rgb(158, 229, 133);
+}
+
+nav span:nth-child(5) a:first-child {
+    color: rgb(234, 37, 37);
+}
+
+#cube-container {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    perspective: 10000px;
+    margin: 100px;
+    z-index: 1;
+}
+
+#cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+    #cube:hover > #front {
+        transform:  
+            rotateX(30deg) 
+            rotateY(45deg) 
+            rotateZ(0deg) 
+            translateX(600px) 
+            translateY(-220px)
+            translateZ(100px);
+    }
+
+    #cube:hover > #bottom {
+        transform:  
+            rotateX(30deg) 
+            rotateY(45deg) 
+            rotateZ(0deg) 
+            translateX(0px) 
+            translateY(500px)
+            translateZ(100px);
+/*        background-image: url(../img/R_letterlight.svg);*/
+    }
+
+#cube div {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: absolute;
+}
+
+
+/*Slide out header */
+/*--------------------------------------*/
+#heading {
+    transform:  translateZ(10px);
+}
+
+#heading .slideElement {
+    position: absolute;
+    top: 20px;
+    font-size: 1.5em;
+    width: 20px;
+    padding-right: 5px;
+    transition: transform 0.5s;
+}
+
+/*Slide down Nav*/
+/*--------------------------------------------*/
+#nav {
+    transform: translateZ(-1px); 
+}
+
+#nav .slideElement {
+    position: absolute;
+    display: block;
+    height: 50px;
+    transition: transform 0.5s;
+}
+
+#navSpacer {
+    width: 100px;
+}
+
+/*This is the styling for each individual letter*/
+.navLink .slideNavElement {
+    position: absolute;
+    height: 50px;
+    width: 15px;
+    font-size: 1.2rem;
+    transition: transform 0.5s;
+}
+
+/*cube faces*/
+/*--------------------------------------------*/
+
+#front {
+    transform:  
+        rotateX(30deg) 
+        rotateY(45deg) 
+        rotateZ(0deg) 
+        translateZ(50px);
+    transition: transform 0.5s;
+    background-image: url(../img/S_letter.svg);
+    transform-style: preserve-3d;
+}
+
+#back {
+    transform:  
+        rotateX(30deg) 
+        rotateY(-135deg) 
+        rotateZ(0deg) 
+        translateZ(50px);
+    background-image: url(../img/S_letterdark.svg);
+}
+
+#top {
+    transform:  
+        rotateX(120deg) 
+        rotateY(0deg) 
+        rotate(45deg) 
+        translateZ(50px);
+    background-image: url(../img/R_letterdark.svg);
+}
+
+#bottom {
+    transform:  
+        rotateX(-60deg) 
+        rotate(45deg) 
+        translateZ(50px);
+    transition: transform 0.5s, background-image 0.5s;
+    background-image: url(../img/R_letter.svg);
+    transform-style: preserve-3d;
+}
+
+#left {
+    transform:  
+        rotateX(30deg) 
+        rotateY(-45deg) 
+        translateZ(50px);
+    background-image: url(../img/C_letter.svg);
+}
+
+#right {
+    transform:  
+        rotateX(30deg) 
+        rotateY(135deg) 
+        rotateZ(0deg) 
+        translateZ(50px);
+    background-image: url(../img/C_letterdark.svg);
+}

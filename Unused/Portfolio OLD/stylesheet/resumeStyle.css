@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+#text_Box {
+	position: absolute;
+	top: 15%;
+	left: 20%;
+	right: 5%;
+}
+
+#contact {
+	float: left;
+	width: 50%;
+}
+
+#experience {
+	float: right;
+	width: 50%;
+}
+
+h2 {
+	padding-bottom: 15px;
+	font-size: 1.2em;
+}
+
+#contact h2:nth-child(3){
+	padding-top: 5%;
+}
+
+#contact h2:nth-child(3) ~ h2 {
+	padding-top: 5%;
+}
+
+h3 {
+	padding: 5px 0 5px 0;
+}
+
+#contact dl {
+	text-indent: 10px;
+}
+
+#experience dl {
+	margin-left: 5%;
+}
+
+#experience dl dt:first-child {
+	font-weight: normal;
+	padding-top: 5px;
+}
+
+dl dt {
+	font-weight: bold;
+	padding: 0 0 5px 0;
+}
+
+#contact dd {
+	text-indent: 2em;
+}
+
+#text_Box ul {
+	padding-left: 5%;
+}
+
+ol > li {
+	padding-bottom: 5%;
+}

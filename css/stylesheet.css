@@ -1,0 +1,364 @@
+/*FONT*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans|Share+Tech+Mono');
+
+.slideElement, .navSlideElement, .headerVertSlide, .placeholder {
+    font-family: 'Share Tech Mono', monospace;
+}
+/*Global Styles*/
+/*-------------------------------------------------------------------*/
+html {
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+/*Header and Footer Styles*/
+/*-------------------------------------------------------------------*/
+
+/*    HEADER ONLY*/
+
+
+/*    FOOTER ONLY*/
+footer {
+    background: rgba(255, 109, 0, 1);
+    padding: 100px;
+    color: white;
+}
+
+.socialMedia {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    list-style: none;
+    margin: 0 0 10px 0;
+    display: inline-block;
+}
+
+.socialMedia li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.footerLinks a {
+    color: white;
+    transition: 0.5s;
+}
+    .footerLinks a:hover {
+        color: #ebebeb;
+    }
+
+.footerLinks a:hover + .linkSlide {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.linkSlide {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transform: translateY(20px);
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+/*Body Styles*/
+/*-------------------------------------------------------------------*/
+
+/*GENERAL BODY STYLES*/
+.fullPage {
+    height: 100vh;
+}
+
+.page {
+    height: 100%;
+    padding: 110px 0;
+}
+
+.page div {
+    height: 100%;
+}
+
+.sectionBreakContainer {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.sectionBreak {
+    position: absolute;
+    border-top: 1px solid black;
+    width: 200px;
+    right: 8%;
+}
+
+    #code .sectionBreak {
+        border-top-color: rgb(255, 109, 0);
+    }
+
+    #drawing .sectionBreak {
+        border-top-color: rgb(65, 117, 222);
+    }
+
+    #design .sectionBreak {
+        border-top-color: rgb(158, 229, 133);
+    }
+
+    #music .sectionBreak {
+        border-top-color: rgb(234, 37, 37);
+    }
+
+/*STYLING FOR THE IMAGE GRIDS*/
+.portfolioSection {
+    max-width: 100%;
+    position: relative;
+}
+    
+    .portfolioSection img {
+        width: 100%;
+        height: auto;
+/*        padding: 4px;  might come back to this */
+    }
+
+    .gridImgOverlay {
+        position: relative;
+    }
+
+    .img-active {
+        box-shadow: 0 20px 30px -4px rgba(0, 0, 0, 0.5);
+        transform: scale(1,1);
+        transition: 0.5s;
+    }
+
+    .imgBackground {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+        .imgBackground-active {
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+    
+    .imgOverlay {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+        .imgOverlay-active {
+            transform: rotate(45deg) scale(0);
+            transition: 0.5s;
+        }
+
+.portfolioArticle {
+    position: relative;
+    vertical-align: top;
+    width: 22%;
+    display: inline-block;
+    margin-left: 10%;
+}
+
+
+/*    this next block selects the first of every two and shifts it over, then the second of every two and shifts that over into the*/
+/*    same position as the first block. This makes it stay in the same spot for every picture*/
+    .portfolioArticle:nth-child(2n+1) .info-active {
+        left: 0;
+    }
+
+    .portfolioArticle:nth-child(2n+2) .info-active {
+        left: -147%;
+    }
+
+        #code .portfolioArticle:nth-child(2n+2) .info-active {
+            left: 0%;
+        }
+
+    .portfolioArticle:nth-child(2n+3) .info-active {
+        left: -294%;
+    }
+
+        #code .portfolioArticle:nth-child(2n+3) .info-active {
+            left: -147%;
+        }
+
+    .portfolioArticle:nth-child(2n+4) .info-active {
+        left: 0;
+    }
+        #code .portfolioArticle:nth-child(2n+4) .info-active {
+            left: -147%;
+        }
+
+.info {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0 10%;
+    float: right;
+    opacity: 0;
+    height: 0;
+    font-size: 0;
+}
+
+.info .description {
+    height: 100px;
+}
+
+    .info-active {
+        position: relative;
+        width: 220%;
+        padding: 3em 0;
+        margin: 0 10%;
+        float: left;
+        height: auto;
+        font-size: 100%;
+        opacity: 1;
+        transition: 0.5s opacity, 0.5s height;
+    }
+
+    .info-active h1 {
+        margin-bottom: .5em;
+    }
+
+    .info-active p, 
+    .info-active ul {
+        margin-bottom: 2em;
+        line-height: 140%; /* probably going to have to change these line height values to something usable */
+    }
+
+.info-active .moreBtn {
+    display: block;
+    width: 100px;
+    margin-top: 0.4em;
+    padding: 0.4em;
+    text-align: center;
+    font-size: 1.1em;
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s background-color, 0.5s border;
+}
+    .moreBtn:hover {
+        background: rgba(255, 109, 0, 1);
+        border: 1px solid white;
+        color: white;
+    }
+
+    .drawBtn:hover {
+        background: rgba(65, 117, 222, 1);
+    }
+
+    .designBtn:hover {
+        background: rgb(158, 229, 133);
+    }
+
+    .musicBtn:hover {
+        background: rgb(234, 37, 37);
+    }
+
+.articleDescription {
+    margin-top: 20px;
+}
+
+.descriptionBorder {
+    position: absolute;
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 50%;
+    width: 50%;
+}
+
+.codeDB {
+    border-right: 1px solid rgb(255, 109, 0);
+    border-top: 1px solid rgb(255, 109, 0);
+    top: 0;
+    right: 0;
+}
+
+.drawDB {
+    border-right: 1px solid rgb(65, 117, 222);
+    border-bottom: 1px solid rgb(65, 117, 222);
+    bottom: 0;
+    right: 0;
+}
+
+.designDB {
+    border-top: 1px solid rgb(158, 229, 133);
+    border-left: 1px solid rgb(158, 229, 133);
+    left: 0;
+    top: 0;
+}
+
+.playDB {
+    border-left: 1px solid rgb(234, 37, 37);
+    border-bottom: 1px solid rgb(234, 37, 37);
+    bottom: 0;
+    left: 0;
+}
+
+/*extra styling for the different grid patterns*/
+
+
+/*image overlay colors */
+.codeImgOverlay {
+    background: rgb(255, 109, 0);
+    opacity: 0.2;
+}
+
+.codeImgBackground {
+    background: rgb(255, 109, 0);
+    opacity: 0.2;
+}
+
+.drawImgOverlay {
+    background-color: rgb(65, 117, 222);
+    opacity: 0.2;
+}
+
+.drawImgBackground {
+    background: rgb(65, 117, 222);
+    opacity: 0.2;
+}
+
+.designImgOverlay {
+    background-color: rgb(158, 229, 133);
+    opacity: 0.2;
+}
+
+.designImgBackground {
+    background: rgb(158, 229, 133);
+    opacity: 0.2;
+}
+
+.musicImgOverlay {
+    background-color: rgb(234, 37, 37);
+    opacity: 0.2;
+}
+
+.musicImgBackground {
+    background: rgb(234, 37, 37);
+    opacity: 0.2;
+}
+
+/*the little lines by the description text */
+
+
+/*FULL PAGE VIDEO STYLES*/
+#video {
+    height: 100%;
+}
+
+.placeholder {
+    color: rgb(255, 109, 0);
+    padding-top: 50vh;
+    width: 50%;
+    margin: 0 auto; 
+}
+
+/*SPINNING SECTION HEADERS!*/
+/*----------------------------------------------------*/
+
