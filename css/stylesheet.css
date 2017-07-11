@@ -1,7 +1,7 @@
 /*FONT*/
 @import url('https://fonts.googleapis.com/css?family=PT+Sans|Share+Tech+Mono');
 
-.slideElement, .navSlideElement, .headerVertSlide, .placeholder {
+.slideElement, .navSlideElement, .headerVertSlide, .placeholder, h1, h2, h3 {
     font-family: 'Share Tech Mono', monospace;
 }
 /*Global Styles*/
@@ -12,6 +12,46 @@ html {
 body {
     font-family: 'PT Sans', sans-serif;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*COLOR classes*/
+.codeBG {
+    background: rgb(255, 109, 0);
+}
+
+.codeFC {
+    color: rgb(255, 109, 0);
+}
+
+.drawBG {
+    background-color: rgb(65, 117, 222);
+}
+
+.drawFC {
+    color: rgb(65, 117, 222);
+}
+
+.designBG {
+    background-color: rgb(158, 229, 133);
+}
+
+.designFC {
+    color: rgb(158, 229, 133);
+}
+
+.musicBG{
+    background-color: rgb(234, 37, 37);
+}
+
+.musicFC {
+    color: rgb(234, 37, 37);
+}
+
 
 /*Header and Footer Styles*/
 /*-------------------------------------------------------------------*/
@@ -65,12 +105,30 @@ footer {
 }
 
 
-/*Body Styles*/
+/*Body Styles for index.html*/
 /*-------------------------------------------------------------------*/
 
 /*GENERAL BODY STYLES*/
 .fullPage {
     height: 100vh;
+}
+
+.fullPage-min {
+    min-height: 100vh;
+}
+
+.scrollParent {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.scrollChild {
+    height: 100%;
+    width: calc(100% + 17px);
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .page {
@@ -359,6 +417,20 @@ footer {
     margin: 0 auto; 
 }
 
-/*SPINNING SECTION HEADERS!*/
+/*_piece.html styles*/
 /*----------------------------------------------------*/
 
+.picList li {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.scrollLink {
+    
+}
+
+.scrollImg {
+    width: 100%;
+    height: auto;
+}
