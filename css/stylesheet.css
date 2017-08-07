@@ -1,6 +1,13 @@
 /*FONT*/
 @import url('https://fonts.googleapis.com/css?family=PT+Sans|Share+Tech+Mono');
 
+@font-face {
+ font-family: 'icomoon';
+ src: url('fonts/icomoon.eot');
+ font-weight: normal;
+ font-style: normal;
+ }
+
 .slideElement, .navSlideElement, .headerVertSlide, .placeholder, h1, h2, h3 {
     font-family: 'Share Tech Mono', monospace;
 }
@@ -83,6 +90,9 @@ footer {
 
 .footerLinks a {
     color: white;
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
     .footerLinks a:hover {
@@ -91,16 +101,23 @@ footer {
 
 .footerLinks a:hover + .linkSlide {
     opacity: 1;
-    transform: translateY(0px);
+    -webkit-transform: translateY(40px);
+        -ms-transform: translateY(40px);
+            transform: translateY(40px);
 }
 
 .linkSlide {
     position: absolute;
     width: 100%;
     left: 0;
-    transform: translateY(20px);
+    bottom: 0;
+    -webkit-transform: translateY(60px);
+        -ms-transform: translateY(60px);
+            transform: translateY(60px);
     text-align: center;
     opacity: 0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -115,20 +132,6 @@ footer {
 
 .fullPage-min {
     min-height: 100vh;
-}
-
-.scrollParent {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    overflow-x: hidden;
-}
-
-.scrollChild {
-    height: 100%;
-    width: calc(100% + 17px);
-    overflow-y: scroll;
-    overflow-x: hidden;
 }
 
 .page {
@@ -152,19 +155,19 @@ footer {
     right: 8%;
 }
 
-    #code .sectionBreak {
+    .code .sectionBreak {
         border-top-color: rgb(255, 109, 0);
     }
 
-    #drawing .sectionBreak {
+    .drawing .sectionBreak {
         border-top-color: rgb(65, 117, 222);
     }
 
-    #design .sectionBreak {
+    .design .sectionBreak {
         border-top-color: rgb(158, 229, 133);
     }
 
-    #music .sectionBreak {
+    .music .sectionBreak {
         border-top-color: rgb(234, 37, 37);
     }
 
@@ -185,8 +188,13 @@ footer {
     }
 
     .img-active {
-        box-shadow: 0 20px 30px -4px rgba(0, 0, 0, 0.5);
-        transform: scale(1,1);
+        -webkit-box-shadow: 0 20px 30px -4px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 20px 30px -4px rgba(0, 0, 0, 0.5);
+        -webkit-transform: scale(1,1);
+            -ms-transform: scale(1,1);
+                transform: scale(1,1);
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
         transition: 0.5s;
     }
 
@@ -197,7 +205,11 @@ footer {
         height: 100%;
     }
         .imgBackground-active {
-            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
             transition: 0.5s;
         }
     
@@ -208,7 +220,11 @@ footer {
         height: 100%;
     }
         .imgOverlay-active {
-            transform: rotate(45deg) scale(0);
+            -webkit-transform: rotate(45deg) scale(0);
+                -ms-transform: rotate(45deg) scale(0);
+                    transform: rotate(45deg) scale(0);
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
             transition: 0.5s;
         }
 
@@ -274,6 +290,8 @@ footer {
         height: auto;
         font-size: 100%;
         opacity: 1;
+        -webkit-transition: 0.5s opacity, 0.5s height;
+        -o-transition: 0.5s opacity, 0.5s height;
         transition: 0.5s opacity, 0.5s height;
     }
 
@@ -298,6 +316,8 @@ footer {
     border: 1px solid black;
     text-decoration: none;
     text-transform: uppercase;
+    -webkit-transition: 0.5s background-color, 0.5s border;
+    -o-transition: 0.5s background-color, 0.5s border;
     transition: 0.5s background-color, 0.5s border;
 }
     .moreBtn:hover {
@@ -322,12 +342,32 @@ footer {
     margin-top: 20px;
 }
 
+.mobileArticleDescriptionDiv {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding-top: 1px;
+}
+
 .descriptionBorder {
     position: absolute;
     margin-left: -20px;
     margin-right: -20px;
     height: 50%;
     width: 50%;
+}
+
+.descriptionBorder_piece {
+    position: absolute;
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 50%;
+    width: 50%;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    left: 0;
+    top: 0;
+    z-index: -1;
 }
 
 .codeDB {
@@ -420,17 +460,151 @@ footer {
 /*_piece.html styles*/
 /*----------------------------------------------------*/
 
-.picList li {
-    width: 150px;
-    height: 150px;
+#piece {
+}
+
+.technology .fa {
+    padding: 10px 10px;
+}
+
+.scrollParent {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.scrollChild {
+    height: 100%;
+    width: calc(100% + 17px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.leftPanel {
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+    .quickLinkBox {
+        text-align: right;
+    }
+
+    .picList {
+        position: relative;
+        display: inline-block;
+        text-align: right;
+        padding-top: 15px;
+/*        padding-right: 10px;*/
+    }
+
+    .picList li {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    .piclist a {
+        width: 150px;
+        height: 150px;
+    }
+
+    .picList img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+
+.scrollPicList iframe {
+    width: 100%;
+    height: 500px;
+}
+
+.scrollPicList .scrollImg {
     margin-bottom: 10px;
 }
 
-.scrollLink {
-    
+    .technology {
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 15px;
+        padding-right: 30px;
+    }
+
+    .techLi {
+        position: relative;
+    }
+        .techLi:hover > .techSlide {
+            opacity: 1;
+            padding-right: 5px;
+            -webkit-transform: translateX(-100%);
+                -ms-transform: translateX(-100%);
+                    transform: translateX(-100%);
+        }
+
+    .techSlide {
+        position: absolute;
+        top: calc(50% - 1em);
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+                transform: translateX(-100%);
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+    }
+
+    .pieceDesc {
+       padding-left: 50%; 
+    }
+
+.rightPanel {
+    background-color: white;
 }
 
-.scrollImg {
-    width: 100%;
-    height: auto;
+    .scrollImg {
+        max-height: 100vh;
+        width: auto;
+    }
+
+.pieceNav {
+    position: absolute;
+    padding: 10px;
+    width: 150px;
+}
+
+/*media queries*/
+
+/*main body quieries*/
+
+@media screen and (max-width: 640px) {
+    body {
+        font-size: 0.9rem;
+    }
+}
+
+/*piece.html quieries */
+
+@media screen and (max-width: 1024px) {
+    .scrollParent, .scrollChild {
+        overflow-x: visible;
+        overflow-y: visible;
+        width: 100%;
+    }
+    
+    #piece, #piece .fullPage {
+        height: 100%; 
+    }
+    
+    .scrollPicList {
+        text-align: right;
+    }
+    
+    .picList li {
+        height: 100px;
+        width: 100px;
+    }
 }

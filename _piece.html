@@ -12,136 +12,68 @@
         <link href="./css/headerCube.css" type="text/css" rel="stylesheet">
         <link href="./css/stylesheet.css" type="text/css" rel="stylesheet">
         <link href="./font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+        <link href="./css/mobileStylesheet.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
         <div id="wrapper">
-            <nav>
-                <div id="cube-container">
-                    <div id="cube">
-    <!--                    the viewable sides of the cube-->
-                        <div id="front"></div>
-                        <div id="left"></div>
-                        <div id="bottom"></div>
-    <!--                    this is where the header begins-->
-                        <header>
-                            <div id="heading">
-                                <span class="slideElement">C</span>
-                                <span class="slideElement">H</span>
-                                <span class="slideElement">R</span>
-                                <span class="slideElement">I</span>
-                                <span class="slideElement">S</span>
-                                <span class="slideElement">&nbsp;</span>
-                                <span class="slideElement">S</span>
-                                <span class="slideElement">T</span>
-                                <span class="slideElement">E</span>
-                                <span class="slideElement">H</span>
-                                <span class="slideElement">M</span>
-                            </div>
-                        </header>
-    <!--                    this is where the nav begins-->
-                        <div id="nav">
-                            <span class="slideElement navLink">
-                                <span class="slideNavElement" id="navSpacer"></span>
-                            </span>
-                            <span class="slideElement navLink">
-                                <a href="#code">
-                                    <span class="slideNavElement">c</span>
-                                    <span class="slideNavElement">o</span>
-                                    <span class="slideNavElement">d</span>
-                                    <span class="slideNavElement">e</span>
-                                </a>
-                            </span>
-                            <span class="slideElement navLink">
-                                <a href="#drawing">
-                                    <span class="slideNavElement">d</span>
-                                    <span class="slideNavElement">r</span>
-                                    <span class="slideNavElement">a</span>
-                                    <span class="slideNavElement">w</span>
-                                </a>
-                            </span>
-                            <span class="slideElement navLink">
-                                <a href="#design">
-                                    <span class="slideNavElement">d</span>
-                                    <span class="slideNavElement">e</span>
-                                    <span class="slideNavElement">s</span>
-                                    <span class="slideNavElement">i</span>
-                                    <span class="slideNavElement">g</span>
-                                    <span class="slideNavElement">n</span>
-                                </a>
-                            </span>
-                            <span class="slideElement navLink">
-                                <a href="#music">
-                                    <span class="slideNavElement">p</span>
-                                    <span class="slideNavElement">l</span>
-                                    <span class="slideNavElement">a</span>
-                                    <span class="slideNavElement">y</span>
-                                </a>
-                            </span>
-                        </div>
-    <!--                    these are the backsides of the cube-->
-                        <div id="right"></div>
-                        <div id="top"></div>
-                        <div id="back"></div>
-                    </div>
-                </div>
+            <nav class="pieceNav">
+                <a href="index.html"><i class="fa fa-arrow-left"></i> back</a>
             </nav>
-<!--            This is the beginning of the structure-->
+<!--This is the beginning of the structure-->
             
             
-<!--            first page is the video resume-->
-            <div class="row column expanded fullPage">
+<!--first page is the video resume-->
+            <div class="row column expanded fullPage" id="piece">
                     <!-- this is the informational thingy that will have the title, technologies, longer description and so forth --> 
-                    <div class="columns large-6 small-12 fullPage">
+                    <div class="columns large-6 small-12 fullPage leftPanel">
                         <div class="scrollParent">
                             <div class="scrollChild">
-                                <div class="row column large-12">
-                                    <h1 class="pieceHeader text-right codeFC">Title</h1>
+                                <div class="">
+                                    <h1 class="pieceHeader text-right codeFC">This is where a title goes</h1>
                                 </div>
-                                <div class="row">
-                                    <div class="columns large-1 large-offset-9">
+                                <div class="quickLinkBox">
                                         <ul class="technology codeFC">
-                                            <li>
+                                            <li class="techLi">
+                                                <span class="techSlide">HTML5</span>
                                                 <i class="fa fa-html5 fa-3x"></i>
                                             </li>
-                                            <li>
+                                            <li class="techLi">
+                                                <span class="techSlide">CSS3</span>
                                                 <i class="fa fa-css3 fa-3x"></i>
                                             </li>
-                                            <li>
+                                            <li class="techLi">
+                                                <span class="techSlide">GitHub</span>
                                                 <i class="fa fa-github fa-3x"></i>
                                             </li>
-                                            <li>
+                                            <li class="techLi">
+                                                <span class="techSlide">Database/Dynamic</span>
                                                 <i class="fa fa-database fa-3x"></i>
                                             </li>
                                         </ul>
-                                    </div>
-                                    <div class="columns large-2 end">
                                         <ul class="picList">
-                                            <li class="codeBG">
-                                                <a href="">
-                                                    <img src="" alt="">
+                                            <li>
+                                                <a class="#pic1" href="#pic01">
+                                                    <img src="./img/angeleyes.jpg" alt="">
                                                 </a>
                                             </li>
-                                            <li class="codeBG">
-                                                <a href="">
-                                                    <img src="" alt="">
+                                            <li class="">
+                                                <a href="#pic02">
+                                                    <img src="./img/Fayecoverlarge.jpg" alt="">
                                                 </a>
                                             </li>
-                                            <li class="codeBG">
-                                                <a href="">
-                                                    <img src="" alt="">
+                                            <li class="">
+                                                <a href="#pic03">
+                                                    <img src="./img/Mermaidfinal1.jpg" alt="">
                                                 </a>
                                             </li>
-                                            <li class="codeBG">
-                                                <a href="">
-                                                    <img src="" alt="">
+                                            <li class="">
+                                                <a href="#pic04">
+                                                    <img src="./img/Wackywidgetsmockup-large.jpg" alt="">
                                                 </a>
                                             </li>
+                                            <span class="descriptionBorder_piece codeFC"></span>
                                         </ul>
-                                    </div>
-                                </div>
-                                <div class="row expanded">
-                                    <div class="column large-6 large-offset-6 end">
                                         <p class="pieceDesc text-right">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus luctus libero massa. Phasellus suscipit neque quis congue molestie. Donec pharetra nulla eget magna molestie, vel finibus lacus mattis. Nulla posuere pharetra justo, eget vehicula nibh. Mauris non odio imperdiet, tristique enim eu, dapibus lectus. Vivamus sapien nulla, aliquet at varius et, fringilla in elit. Mauris ut metus odio. Nulla fermentum, dui a dapibus euismod, magna nibh blandit massa, at fringilla risus quam ac ipsum. Donec et turpis sit amet turpis rutrum venenatis a id nisl. Mauris at metus vel urna molestie rhoncus.
                                         </p>
@@ -152,37 +84,32 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                
                     <!-- this is the picture column -->
-                    <div class="columns large-6 small-12 fullPage">
+                    <div class="columns large-6 small-12 fullPage rightPanels">
                         <div class="scrollParent">
                             <div class="scrollChild">
                                 <ul class="scrollPicList">
-                                    <li class="codeBG">
-                                        <a class="scrollLink" href="">
-                                            <img class="scrollImg" src="./img/angeleyes.jpg" alt="">
-                                        </a>
+                                    <li id="pic1">
+                                        <img class="scrollImg" id="pic01" src="./img/angeleyes.jpg" alt="">
                                     </li>
-                                    <li class="codeBG">
-                                        <a class="scrollLink" href="">
-                                            <img class="scrollImg" src="./img/Fayecoverlarge.jpg" alt="">
-                                        </a>
+                                    <li id="pic2">
+                                        <img class="scrollImg" id="pic02" src="./img/Fayecoverlarge.jpg" alt="">
                                     </li>
-                                    <li class="codeBG">
-                                        <a class="scrollLink" href="">
-                                            <img class="scrollImg" src="./img/Mermaidfinal1.jpg" alt="">
-                                        </a>
+                                    <li id="pic3">
+                                        <img class="scrollImg" id="pic03" src="./img/Mermaidfinal1.jpg" alt="">
                                     </li>
-                                    <li class="codeBG">
-                                        <a class="scrollLink" href="">
-                                            <img class="scrollImg" src="./img/Wackywidgetsmockup-large.jpg" alt="">
-                                        </a>
+                                    <li id="pic4">
+                                        <img class="scrollImg" id="pic04" src="./img/Wackywidgetsmockup-large.jpg" alt="">
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-            </div>
+                
+                </div><!--row-->
+            </div> <!--wrapper-->
+        
             <footer>
                 <div class="row">
                     <div class="columns small-12 footerLinks">
@@ -196,13 +123,13 @@
                                 <a href="https://www.facebook.com/ThePudgyPlatypi/">
                                     <i class="fa fa-facebook-official fa-3x"></i>
                                 </a>
-                                <p class="linkSlide">ThePudgyPlatypi Facebook Page</p>
+                                <p class="linkSlide">ThePudgyPlatypi Facebook</p>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/thepudgyplatypi/">
                                     <i class="fa fa-instagram fa-3x"></i>
                                 </a>
-                                <p class="linkSlide">ThePudgyPlatypi Instagram Profile</p>
+                                <p class="linkSlide">ThePudgyPlatypi Instagram</p>
                             </li>
                             <li>
                                 <a href="https://www.linkedin.com/in/chrisstehm/">
@@ -253,7 +180,7 @@
                                 <p class="linkSlide">Click to Contact</p>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="./img/ChrisStehm-Resume-2017.pdf">
                                     <i class="fa fa-file-text fa-3x"></i>
                                 </a>
                                 <p class="linkSlide">Download Resume</p>
@@ -262,7 +189,6 @@
                     </div>
                 </div>
             </footer>
-        </div>
         
         <script src="./js/vendor/jquery.min.js"></script>
         <script src="./js/vendor/foundation.min.js"></script>
